@@ -53,10 +53,14 @@ function renderItems(categoryId) {
         app.innerHTML = `<button onclick="renderCategories()">Back</button>
       <h2>Items</h2>
       <button onclick="showAddItem(${categoryId})">Add Item</button>
-      <div>${items.map(i => `<div>
-        <img src="${i.picture}" width="100"><br>${i.name}
-        <button onclick="playSound('${i.sound}')">🔊</button>
-      </div>`).join('')}</div>`;
+      <div class="items-grid">
+        ${items.map(i => `
+          <div class="item-card">
+            <img src="${i.picture}" onclick="playSound('${i.sound}')" alt="${i.name}">
+            <div class="item-name">${i.name}</div>
+          </div>
+        `).join('')}
+      </div>`;
     });
 }
 function showAddCategory() {

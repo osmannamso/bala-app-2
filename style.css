@@ -88,3 +88,47 @@ audio {
         padding: 0.5em;
     }
 }
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-items: center;
+}
+
+.item-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0.5em auto;
+    cursor: pointer;
+    display: block;
+}
+
+.item-card .item-name {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    color: #222;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+    .item-card img {
+        width: 120px;
+        height: 120px;
+    }
+}
