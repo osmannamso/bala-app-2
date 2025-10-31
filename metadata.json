@@ -1,0 +1,8 @@
+{
+  "name": "Kid's Learning Soundboard",
+  "description": "An interactive learning app for kids. Create categories and items with custom pictures and sounds. Works offline!",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
